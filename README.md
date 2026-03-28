@@ -22,11 +22,13 @@ Each service communicates with others via REST APIs and Eureka service discovery
 
 ⚡ End-to-End Flow
 
+
 Here’s how a typical request flows through the system:
 
 1). Client Request
 
 A client (web, mobile, or Postman) sends a request to the API Gateway.
+
 
 
 2). API Gateway Routing
@@ -37,6 +39,7 @@ Netflix Zuul Gateway intercepts the request, performs authentication checks, log
 3). Service Discovery
 
 The API Gateway queries Eureka Naming Server to dynamically discover the instance of the microservice to route to. 
+
 
 4). Authentication
 
@@ -96,7 +99,10 @@ If the route requires authentication, the request goes through user-authenticati
 
 
 
+
 ⚙️ Technologies Used
+
+
 
 Spring Boot – Microservice development
 
@@ -111,7 +117,9 @@ Spring Security + JWT – Authentication
 Spring Data JPA / Hibernate – Database access
 
 
+
 💡 Key Features
+
 
 Dynamic Service Discovery – No hardcoding of service URLs, Eureka manages service registry.
 
@@ -130,11 +138,13 @@ Maven – Build and dependency management
 
 🚀 Setup Instructions
 
+
 1). Clone the repo 
 
-git clone https://github.com/username/microservices-project.git
+git clone https://github.com/psinha05/microservices-project.git
 
 cd microservices-project
+
 
 2). Start Eureka Naming Server
 
@@ -142,11 +152,13 @@ cd netflix-eureka-naming-server
 
 mvn spring-boot:run
 
+
 3). Start Config Server
 
 cd spring-cloud-config-server
 
 mvn spring-boot:run
+
 
 4). Start API Gateway
 
@@ -154,9 +166,11 @@ cd netflix-zuul-api-gateway-server
 
 mvn spring-boot:run
 
+
 5). Start Microservices
 
 cd user-authentication
+
 mvn spring-boot:run
 
 cd user-data
@@ -172,6 +186,7 @@ Authenticate via user-authentication
 Perform CRUD operations on user-data
 
 🔐 Notes
+
 
 Ensure database is running before starting services that require it (user-data).
 
