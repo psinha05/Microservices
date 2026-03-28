@@ -51,29 +51,30 @@ If the route requires authentication, the request goes through user-authenticati
        
 5). Business Logic Execution
 
-  *  The user-data service receives the request, handled by Spring Boot REST Controllers.
+       *  The user-data service receives the request, handled by Spring Boot REST Controllers.
 
-  *  Controllers call Service classes which contain business logic.
+       *  Controllers call Service classes which contain business logic.
 
-  *   Services interact with Repository layer to perform database operations.
+       *   Services interact with Repository layer to perform database operations.
 
     
 6). Database Interaction
 
- *  user-data service uses Spring Data JPA / Hibernate to interact with the database.
+       *   user-data service uses Spring Data JPA / Hibernate to interact with the database.
 
- *  Executes queries for CRUD operations, e.g., fetching user info or updating records.
+       *   Executes queries for CRUD operations, e.g., fetching user info or updating records.
 
 7). Response Back to Client
 
-    * The microservice returns the result to Zuul Gateway, which forwards it back to the client.
+       *   The microservice returns the result to Zuul Gateway, which forwards it back to the client.
     
-    * Any streaming, pagination, or formatting is handled by the gateway or service layer.
+       *    Any streaming, pagination, or formatting is handled by the gateway or service layer.
 
 
     🔗 Communication Diagram
 
-    <img width="1558" height="811" alt="mermaid-diagram(1)" src="https://github.com/user-attachments/assets/37795e14-3354-4db8-a29c-a6792b8a61e7" />
+   <img width="1558" height="811" alt="mermaid-diagram(1)" src="https://github.com/user-attachments/assets/872ea0c6-5d3b-41f1-acd6-5ca5c9cd9640" />
+
 
 
 
@@ -83,20 +84,30 @@ If the route requires authentication, the request goes through user-authenticati
     microservices-project/
     
 ├── netflix-eureka-naming-server       # Service registry
+
 ├── netflix-zuul-api-gateway-server    # API Gateway
+
 ├── spring-cloud-config-server         # Centralized configuration
+
 ├── user-authentication                # Authentication and JWT service
+
 └── user-data                           # User data CRUD service
+
 
 
 
 ⚙️ Technologies Used
 
 Spring Boot – Microservice development
+
 Spring Cloud Eureka – Service discovery
+
 Spring Cloud Config – Centralized configuration
+
 Zuul API Gateway – Request routing and filtering
+
 Spring Security + JWT – Authentication
+
 Spring Data JPA / Hibernate – Database access
 
 
@@ -111,5 +122,7 @@ Secure API Gateway – JWT authentication ensures only authorized requests pass.
 Resilient Microservices – Independent services with their own databases.
 
 Scalable Architecture – Microservices can scale independently.
+
 MySQL / PostgreSQL – Database
+
 Maven – Build and dependency management
