@@ -141,49 +141,49 @@ Maven – Build and dependency management
 
 1). Clone the repo 
 
-git clone https://github.com/psinha05/microservices-project.git
+      *    git clone https://github.com/psinha05/microservices-project.git
 
-cd microservices-project
+      *    cd microservices-project
 
 
 2). Start Eureka Naming Server
 
-cd netflix-eureka-naming-server
+       *    cd netflix-eureka-naming-server
 
-mvn spring-boot:run
+      *     mvn spring-boot:run
 
 
 3). Start Config Server
 
-cd spring-cloud-config-server
+      *      cd spring-cloud-config-server
 
-mvn spring-boot:run
+      *      mvn spring-boot:run
 
 
 4). Start API Gateway
 
-cd netflix-zuul-api-gateway-server
+       *     cd netflix-zuul-api-gateway-server
 
-mvn spring-boot:run
+       *     mvn spring-boot:run
 
 
 5). Start Microservices
 
-cd user-authentication
+       *     cd user-authentication
 
-mvn spring-boot:run
+       *     mvn spring-boot:run
 
-cd user-data
+       *     cd user-data
 
-mvn spring-boot:run
+       *     mvn spring-boot:run
 
 6). Test Endpoints
 
-Access services via API Gateway URL
+       *     Access services via API Gateway URL
 
-Authenticate via user-authentication
+       *     Authenticate via user-authentication
 
-Perform CRUD operations on user-data
+       *     Perform CRUD operations on user-data
 
 🔐 Notes
 
